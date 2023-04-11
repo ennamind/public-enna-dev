@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request
-from app.assets import prompt_functions
+import prompt_functions
 
 app = Flask(__name__)
 
