@@ -2,18 +2,10 @@ import os
 import openai 
 
 
-# def initial_prompt(path_to_context_prompt=os.path.join("prompt_stuff", "context_prompt.txt"), message="start with a welcome message"):
-    
-    
-
-#     # with open(path_to_context_prompt, 'r') as f:
-#     #     context_prompt = f.read()
-
-#     prompt = context_prompt + message
-
-#     return prompt
-
 def get_openai_response(prompt, conversation_history):
+
+    openai.organization = os.environ.get('ORGANISATION_ID')
+    openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 
     context_prompt = """ 
