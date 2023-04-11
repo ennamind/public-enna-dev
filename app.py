@@ -1,5 +1,4 @@
 import os
-from app.run import app
 from flask import Flask, render_template, request
 from app.assets import prompt_functions
 
