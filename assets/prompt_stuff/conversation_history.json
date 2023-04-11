@@ -1,0 +1,11 @@
+{
+    "chatbotconversationhistory": {
+      "today": [
+        {
+          "prompt": "Hi there! How can I assist you today?",
+          "response": "I need help with my addiction",
+          "datetime": "2022-04-01T09:15:00"
+        }
+      ]
+    }
+  }
