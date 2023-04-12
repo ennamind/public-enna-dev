@@ -35,22 +35,23 @@ def conversation():
                 'datetime': ''
             })
         
-        # add the user input to the conversation history
-        conversation_history.append({
-            'chatbotOutput': '-this is user input-',
-            'userInput': text_input_from_user,
-            'datetime': ''
-        })
-        
-        # get the chatbot response using the user input
-        chatbot_response = prompt_functions.get_openai_response(text_input_from_user, conversation_history)
-        
-        # add the chatbot response to the conversation history
-        conversation_history.append({
-            'chatbotOutput': chatbot_response,
-            'userInput': '-this is response from user input-',
-            'datetime': ''
-        })
+        else:
+            # add the user input to the conversation history
+            conversation_history.append({
+                'chatbotOutput': '-this is user input-',
+                'userInput': text_input_from_user,
+                'datetime': ''
+            })
+            
+            # get the chatbot response using the user input
+            chatbot_response = prompt_functions.get_openai_response(text_input_from_user, conversation_history)
+            
+            # add the chatbot response to the conversation history
+            conversation_history.append({
+                'chatbotOutput': chatbot_response,
+                'userInput': '-this is response from user input-',
+                'datetime': ''
+            })
  
     return render_template('input_form.html', conversation_history=conversation_history)
 
