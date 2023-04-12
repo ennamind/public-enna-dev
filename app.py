@@ -21,8 +21,19 @@ def conversation():
         })
     
     if request.method == 'POST':
+
         # get the user input from the form
         text_input_from_user = request.form['user_input']
+
+        # add clear conversation functionality
+        if text_input_from_user == "clear":
+            conversation_history = []
+            welcome_message = prompt_functions.get_openai_response("start with a welcome message", conversation_history)
+            conversation_history.append({
+                'chatbotOutput': welcome_message,
+                'userInput': '-this is first welcome message-',
+                'datetime': ''
+            })
         
         # add the user input to the conversation history
         conversation_history.append({

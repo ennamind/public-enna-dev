@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chatbot App</title>
+    <title>enna chat</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,7 +81,7 @@
     <h1>Chatbot App</h1>
     <div class="chat-container">
         <form method="POST">
-            <input type="text" name="user_input" placeholder="Enter your text here">
+            <input type="text" name="user_input" placeholder="Enter your text here. Type clear to start conversation again">
             <input type="submit" value="Submit">
         </form>
         {% for conv in conversation_history[::-1] %}
